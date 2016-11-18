@@ -29,3 +29,8 @@ Crie um diretório e dentro dele forneça os arquivos fasta ou fastq (trimados a
 
 Análise de dados single-end trimados a priori: no diretório de análise você deve fornecer os arquivos fasta ou fasta junto dos arquivos map_file.txt e custom_parameters.txt. Invoque o programa start.sh (sem colocar opções) e selecione a opção 1 para arquivo trimado no formato fasta ou 2 para arquivo trimado no formato fastq.
 
+
+Análise de dados single-end sem trimar: forneça os arquivos de adaptadores, primers, map_file.txt e custom_parameters.txt e, no mesmo diretório, coloque os arquivos fastq. Invoque o programa start.sh normalmente.
+
+
+Análise de dados paired-end sem trimar: além dos arquivos de adaptarores, primers, map_file.txt e custom_parameters, forneça o arquivo list.txt, o qual será reconhecido para a execução do programa Pandaseq.

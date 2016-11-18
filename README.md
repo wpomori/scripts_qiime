@@ -17,3 +17,14 @@ O script principal é o start.sh, o qual pode invocar o qiime_fa.sh, qiime_fq.sh
   
   -uparse.sh: após a trimagem, todos os programas das opções de 1-4 do programa start.sh usam a abordagem UPARSE do USEARCH para identificar e eliminar sequências quimeras.
   
+
+  SINTAXE DE USO DO PROGRAMA start.sh
+Crie um diretório e dentro dele forneça os arquivos fasta ou fastq (trimados a priori ou não) junto dos arquivos necessários. Para pedir ajuda digite o seguinte:
+
+$start.sh -h
+ou
+$statr.sh --help
+
+
+Análise de dados single-end trimados a priori: no diretório de análise você deve fornecer os arquivos fasta ou fasta junto dos arquivos map_file.txt e custom_parameters.txt. Invoque o programa start.sh (sem colocar opções) e selecione a opção 1 para arquivo trimado no formato fasta ou 2 para arquivo trimado no formato fastq.
+

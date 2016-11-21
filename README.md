@@ -57,6 +57,8 @@ O script principal é o start.sh, o qual pode invocar o qiime_fa.sh, qiime_fq.sh
   
   -uparse.sh: após a trimagem, todos os programas das opções de 1-4 do programa start.sh usam a abordagem UPARSE do USEARCH para identificar e eliminar sequências quimeras.
   
+  -pipe_trim_ion_16s.sh: contém os comandos paras os programas Cutadapt, Prinseq-lite stand alone e FastQC, usados para trimagem e criação de gráficos de qualidade.
+  
 
                                           SINTAXE DE USO DO PROGRAMA start.sh
   

@@ -94,4 +94,4 @@ Uma janela contendo os seguintes dados será aberta:
 			  6	Sair do programa.
 			Escolha UMA opção entre as opções acima (1-6): 
 
-Escolha a opção desejada e espere finalizar a análise.
+Escolha a opção desejada e espere finalizar a análise. Para as análises da opção 1 e 2, os dados de interesse estaram localizados dentro do diretório out_analysis. Para as opções 3 e 4, os dados de interesse estaram dentro dos diretórios cut_pri_fas (dados processados por Cutadapt e Prinseq-lite stand alone) e out_analysis (dados de saída do QIIME).

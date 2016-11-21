@@ -1,7 +1,7 @@
 # scripts_qiime
                                           PROGRAMAS NECESSÁRIOS PARA COMEÇAR
 
-Sistema Operacional Ubuntu 14.04 LTS 64 bits (https://www.ubuntu.com/)
+Sistema Operacional Ubuntu 14.04 LTS Trusty 64 bits (https://www.ubuntu.com/), processador Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz e 2 núcleos.
 
 Qiime v.1.9.1 (http://qiime.org/index.html)
 

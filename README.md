@@ -36,7 +36,7 @@ Análise de dados single-end sem trimar: forneça os arquivos de adaptadores, pr
 Análise de dados paired-end sem trimar: além dos arquivos de adaptarores, primers, map_file.txt e custom_parameters, forneça o arquivo list.txt, o qual será reconhecido para a execução do programa Pandaseq.
 
 
-          PROGRAMAS NECESSÁRIOS PARA COMEÇAR
+                                          PROGRAMAS NECESSÁRIOS PARA COMEÇAR
 
 Sistema Operacional Ubuntu 14.04 LTS 64 bits (https://www.ubuntu.com/)
 

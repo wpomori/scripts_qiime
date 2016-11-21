@@ -78,4 +78,20 @@ Análise de dados single-end sem trimar: forneça os arquivos de adaptadores, pr
 Análise de dados paired-end sem trimar: além dos arquivos de adaptarores, primers, map_file.txt e custom_parameters, forneça o arquivo list.txt, o qual será reconhecido para a execução do programa Pandaseq.
 
 
+Em seguida ao preparo do diretório de análise para dados single-end ou paired-end, use o seguinte comando:
 
+          $start.sh
+
+Uma janela contendo os seguintes dados será aberta:
+
+			Opção	Ação
+			=====	====
+			  1	Arquivo de entrada está no formato fasta (trimado a priori).
+			  2	Arquivo de entrada está no formato fastq (trimado a priori).
+			  3	Arquivo de entrada está no formato fastq (não trimado e single-end, Ion Torrent PGM/Próton).
+			  4	Arquivo de entrada está no formato fastq (não trimado e paired-end, Pandaseq).
+			  5	Ajuda (?)
+			  6	Sair do programa.
+			Escolha UMA opção entre as opções acima (1-6): 
+
+Escolha a opção desejada e espere finalizar a análise.

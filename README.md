@@ -34,3 +34,25 @@ Análise de dados single-end sem trimar: forneça os arquivos de adaptadores, pr
 
 
 Análise de dados paired-end sem trimar: além dos arquivos de adaptarores, primers, map_file.txt e custom_parameters, forneça o arquivo list.txt, o qual será reconhecido para a execução do programa Pandaseq.
+
+
+          PROGRAMAS NECESSÁRIOS PARA COMEÇAR
+
+Sistema Operacional Ubuntu 14.04 LTS 64 bits (https://www.ubuntu.com/)
+Qiime v.1.9.1 (http://qiime.org/index.html)
+Python v.2.7  (https://www.python.org/)
+Perl v.5.18   (http://www.perl.org/)
+Usearch v.8.1.1861_i86linux32 (http://www.drive5.com/usearch/download.html)
+R v.3.0.2 (https://www.r-project.org/)
+Conda v.4.2.12 (http://conda.pydata.org/miniconda.html)
+MUSCLE v3.8.31 (http://www.drive5.com/muscle)
+PRINSEQ stand alone v.0.20.4 (https://sourceforge.net/projects/prinseq/files/)
+Cutadapt v.1.11 (http://cutadapt.readthedocs.io/en/stable/installation.html)
+Pandaseq v.2.10 (https://github.com/neufeld/pandaseq/wiki/Installation)
+Java version v.1.8 (https://www.oracle.com/index.html)
+FastQC v0.11.5 (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+Mothur v.1.31.2 (https://www.mothur.org/)
+bmp-map2qiime.py (https://github.com/vpylro/BMP)
+bmp-otuName.pl (https://github.com/vpylro/BMP)
+Fastx_toolkit v.0.0.13 (http://hannonlab.cshl.edu/fastx_toolkit/)
+Pip v.8.1.2 (https://wiki.ubuntuusers.de/pip/)

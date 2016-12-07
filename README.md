@@ -10,6 +10,8 @@ Primeiro faça download do arquivo compactado usando wget:
 	$cd scripts_qiime-master
 	
 	$chmod +x install.sh && ./install.sh
+	
+	
 
                                           SINTAXE DE USO DO PROGRAMA start.sh
   

@@ -9,7 +9,7 @@ Primeiro faça download do arquivo compactado usando wget:
 
 	$cd scripts_qiime-master
 	
-	$chmod +x install.sh && ./install.sh
+	$chmod +x install.sh && sudo ./install.sh
 	
 Pronto, agora é só executar o programa.
 

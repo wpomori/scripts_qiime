@@ -7,8 +7,6 @@ Primeiro faça download do arquivo compactado usando wget:
 
 	$unzip master.zip
 
-	$cd scripts_qiime-master
-	
 	$chmod +x ./scripts_qiime-master/install_qiime.sh && sudo ./scripts_qiime-master/install_qiime.sh
 	
 Pronto, agora é só executar o programa.

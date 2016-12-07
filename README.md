@@ -1,5 +1,16 @@
 # scripts_qiime
 
+					   INSTALANDO OS SCRIPTS DO PIPELINE
+Primeiro faça download do arquivo compactado usando wget:
+
+	$wget https://github.com/wpomori/scripts_qiime/archive/master.zip
+
+	$unzip master.sp
+
+	$cd scripts_qiime-master
+	
+	$chmod +x install.sh && ./install.sh
+
                                           SINTAXE DE USO DO PROGRAMA start.sh
   
 Crie um diretório e dentro dele forneça os arquivos fasta ou fastq (trimados a priori ou não) junto dos arquivos necessários. Para pedir ajuda digite o seguinte:

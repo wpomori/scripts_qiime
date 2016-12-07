@@ -11,7 +11,7 @@ Primeiro faça download do arquivo compactado usando wget:
 	
 	$chmod +x install.sh && ./install.sh
 	
-	
+Pronto, agora é só executar o programa.
 
                                           SINTAXE DE USO DO PROGRAMA start.sh
   

@@ -36,6 +36,18 @@ Uma janela contendo os seguintes dados será aberta:
 
 Escolha a opção desejada e espere finalizar a análise. Para as análises da opção 1 e 2, os dados de interesse estaram localizados dentro do diretório out_analysis. Para as opções 3 e 4, os dados de interesse estaram dentro dos diretórios cut_pri_fas (dados processados por Cutadapt e Prinseq-lite stand alone) e out_analysis (dados de saída do QIIME).
 
+                                                INSTALAÇÃO DO PACOTE R
+
+Antes de executar o script todo, será necessário que alguns pacotes do R estejam instalados no sistema. Para isso:
+
+$sudo su
+
+install.packages(c('ape', 'biom', 'optparse', 'RColorBrewer', 'randomForest', 'vegan'))
+	source('http://bioconductor.org/biocLite.R')
+	biocLite(c('DESeq2', 'metagenomeSeq', 'CSS'))
+	q()
+
+
 Os scripts foram desenvolvidos por Wellington Pine Omori (lattes: http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4451674A5) durante o seu Doutorado em Microbiologia Agropecuária em bioinformática (UNESP/FCAV de Jabticabal) e MBA em Administração de Redes Linux. O material foi atualizado no dia 07/12/16.
 
 Quaisquer dúvidas, entre em contato pelo e-mail: wpomori@gmail.com

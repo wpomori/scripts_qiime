@@ -40,11 +40,14 @@ Escolha a opção desejada e espere finalizar a análise. Para as análises da o
 
 Antes de executar o script todo, será necessário que alguns pacotes do R estejam instalados no sistema. Para isso:
 
-$sudo su
+	$sudo su
 
-install.packages(c('ape', 'biom', 'optparse', 'RColorBrewer', 'randomForest', 'vegan'))
+	install.packages(c('ape', 'biom', 'optparse', 'RColorBrewer', 'randomForest', 'vegan'))
+	
 	source('http://bioconductor.org/biocLite.R')
+	
 	biocLite(c('DESeq2', 'metagenomeSeq', 'CSS'))
+	
 	q()
 
 

@@ -5,11 +5,11 @@ Primeiro faça download do arquivo compactado usando wget:
 
 	$wget https://github.com/wpomori/scripts_qiime/archive/master.zip
 
-	$unzip master.sp
+	$unzip master.zip
 
 	$cd scripts_qiime-master
 	
-	$chmod +x install.sh && sudo ./install.sh
+	$chmod +x install_qiime.sh && sudo ./install_qiime.sh
 	
 Pronto, agora é só executar o programa.
 

@@ -245,27 +245,23 @@ rm -rf __MACOSX MiSeq*
 
 
 
-# Dando permissão de execussão para os scripts do pipeline do QIIME
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh
+# Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch && mv /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 /usr/local/bin/usearch81
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh /usr/local/bin/pipe_trim_ion_16s.sh
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh /usr/local/bin/qiime_fa.sh
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh /usr/local/bin/qiime_pe_pa.sh
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh /usr/local/bin/uparse.sh
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh /usr/local/bin/qiime_fq.sh
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh /usr/local/bin/qiime_sg_raw.sh
+	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh /usr/local/bin/start.sh
 
 # Colocando os scripts do pipeline no PATH
-	echo "PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master" > arquivo.txt
-	echo "`echo 'PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master'``cat arquivo.txt`" > /etc/profile
-	echo $PATH
-	export PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master
-	echo $PATH
-
-
-
+#	echo "PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master" > arquivo.txt
+#	echo "`echo 'PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master'``cat arquivo.txt`" > /etc/profile
+#	echo $PATH
+#	export PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master
+#	echo $PATH
 	rm -rf master.zip
-
 
 	# Instalando scripts BMP para usar com QIIME (https://github.com/vpylro/BMP)
 	# cd /tmp
@@ -273,7 +269,7 @@ rm -rf __MACOSX MiSeq*
 	unzip master.zip
 	chmod +x ./BMP-master/*.py && chmod +x ./BMP-master/*.pl
 	mv ./BMP-master /usr/local/bioinfo && ln -s /usr/local/bioinfo/BMP-master/bmp-map2qiime.py /usr/local/bin && ln -s /usr/local/bioinfo/BMP-master/bmp-otuName.pl /usr/local/bin
-	rm -f master.zip
+	rm -rf master.zip BMP-master
 	 
 	# Instalando o fastx_toolkit (http://hannonlab.cshl.edu/fastx_toolkit/download.html)
 	# cd /tmp
@@ -300,7 +296,6 @@ rm -rf __MACOSX MiSeq*
 	echo "	Instalando editor VIM ... "
 	apt-get install vim -y
 	echo " Finalizando instalação do editor VIM"
-
 	rm -rf ./scripts_qiime-master
 
 #=========================================================================
@@ -311,7 +306,7 @@ rm -rf __MACOSX MiSeq*
 
 	# Instalando o R
 	echo "	Iniciando a instalação do pacote R ... "
-	apt-get install r-base-core
+	apt-get install r-base-core -y
 	echo " Finalizando a instalação do R ... "
 	echo " Visite https://github.com/wpomori/scripts_qiime/blob/master/README.md "
 	echo " para ver como instalar pacotes adicionais no R para que o pipeline funcione"

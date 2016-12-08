@@ -26,45 +26,30 @@
 # echo é uma variável para que o sistema entenda que algo deve ser 
 # impresso no terminal. Neste caso, o cabeçalho do script.
 
-	echo "
+#Este shell scrip foi desenvolvido por Wellington Pine Omori no dia 06/12/2016.
 
-Este shell scrip foi desenvolvido por Wellington Pine Omori no dia 06/12/2016.
+#E-mail para contato: wpomori@gmail.com
 
-E-mail para contato: wpomori@gmail.com
+#Mestre em Microbiologia Agropecuária pela Faculdade de Ciências Agrárias e 
+#Veterinárias de Jaboticabal - UNESP/FCAV.
+#Endereço eletrônico: http://www.fcav.unesp.br/
 
-Mestre em Microbiologia Agropecuária pela Faculdade de Ciências Agrárias e 
-Veterinárias de Jaboticabal - UNESP/FCAV.
-Endereço eletrônico: http://www.fcav.unesp.br/
+#MBA em Administração de Redex Linux pela Universidade de Araraquara (UNIARA).
+#Endereço eletrônico: http://www.uniara.com.br/home/
 
-MBA em Administração de Redex Linux pela Universidade de Araraquara (UNIARA).
-Endereço eletrônico: http://www.uniara.com.br/home/
+#Afiliado aos Departamento de Tecnologia e Departamento de Biologia Aplicada a 
+#Agropecuária.
 
-Afiliado aos Departamento de Tecnologia e Departamento de Biologia Aplicada a 
-Agropecuária.
+#  Laboratórios:
+             #Bioquímica de Micro-organismos e Plantas (LBMP) e Laboratório de 
+	     #Genética Aplicada (LGA)"
 
-  Laboratórios:
-             Bioquímica de Micro-organismos e Plantas (LBMP) e Laboratório de 
-	     Genética Aplicada (LGA)"
-		echo "
+#Iniciando a instalação dos programas e dependências para o funcionamento do 
+#pipeline de trimagem, construção de gráficos de qualidade e identificação e 
+#classificação taxonômica usando FastQC, Cutadapt, Prinseq, Pandaseq e QIIME. 
+#Para maiores esclarecimentos sobre o pipeline:
 
-Iniciando a instalação dos programas e dependências para o funcionamento do 
-pipeline de trimagem, construção de gráficos de qualidade e identificação e 
-classificação taxonômica usando FastQC, Cutadapt, Prinseq, Pandaseq e QIIME. 
-Para maiores esclarecimentos sobre o pipeline:
-
-			https://github.com/wpomori/scripts_qiime
-
-Durante a instalação dos programas, APERTE Y ou YES para confirmar a 
-instalação e possibilitar o funcionamentos dos programas
-
-Se der algum erro durante a instalação, execute a atualização do SO e depois
-execute novamente este instalador. Faça assim (sem o $):
-
-	\$sudo apt-get update
-	\$sudo apt-get upgrade -y
-
-   SENHA ROOT DO SO qiime: qiime
-"
+			#https://github.com/wpomori/scripts_qiime
 
 #=========================================================================
 #

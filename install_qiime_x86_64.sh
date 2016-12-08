@@ -151,13 +151,14 @@ execute novamente este instalador. Faça assim (sem o $):
 	# Colocar os binários do minoconda no PATH 
 	# https://www.vivaolinux.com.br/artigo/O-que-e-PATH-como-funciona-e-como-trabalhar-com-eleInsta
 	echo "	Instalando ambiente virtual conda ... "
-	cp /etc/profile /etc/profile_backup
-	echo "PATH=$PATH:/usr/local/bioinfo/miniconda2/bin" > arquivo.txt
-	echo "`echo 'PATH=$PATH:/usr/local/bioinfo/miniconda2/bin'``cat arquivo.txt`" > /etc/profile
-	echo $PATH
-	export PATH=$PATH:/usr/local/bioinfo/miniconda2/bin
-	echo $PATH
+#	cp /etc/profile /etc/profile_backup
+#	echo "PATH=$PATH:/usr/local/bioinfo/miniconda2/bin" > arquivo.txt
+#	echo "`echo 'PATH=$PATH:/usr/local/bioinfo/miniconda2/bin'``cat arquivo.txt`" > /etc/profile
+#	echo $PATH
+#	export PATH=$PATH:/usr/local/bioinfo/miniconda2/bin
+#	echo $PATH
 	wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh && chmod +x ./Miniconda2-latest-Linux-x86_64.sh && ./Miniconda2-latest-Linux-x86_64.sh -f -p /usr/local/bioinfo/miniconda2
+	ln -s /usr/local/bioinfo/miniconda2/bin/conda /usr/local/bin/conda
 	conda update conda
 	rm -f ./Miniconda2-latest-Linux-x86_64.sh && rm -f ./arquivo.txt
 	echo " Terminado instalação conda ... "
@@ -268,6 +269,7 @@ rm -rf __MACOSX MiSeq*
 
 	# Colocar os binários do fastx_toolkit no PATH
 	# https://www.vivaolinux.com.br/artigo/O-que-e-PATH-como-funciona-e-como-trabalhar-com-eleInsta
+	cp /etc/profile /etc/profile_backup
 	echo "PATH=$PATH:/usr/local/bioinfo/fastx_toolkit_0.0.13/bin" > arquivo.txt
 	echo "`echo 'PATH=$PATH:/usr/local/bioinfo/fastx_toolkit_0.0.13/bin'``cat arquivo.txt`" > /etc/profile
 	echo $PATH

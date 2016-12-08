@@ -125,7 +125,7 @@ execute novamente este instalador. Faça assim (sem o $):
 	mkdir -p /usr/local/bioinfo
 	mv ./FastQC /usr/local/bioinfo
 	ln -s /usr/local/bioinfo/FastQC/fastqc /usr/local/bin/fastqc
-	rm -f fastqc_v0.11.5.zip Fast*
+	rm -f fastqc_v0.11.5.zip FastQC
 	echo " Finalizando a instalação de FastQC ... "
 
 #=========================================================================
@@ -234,7 +234,7 @@ mkdir -p /usr/local/bioinfo/qiime_examples
 chown -R $USER /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
-cp /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
+cp -r ./scripts_qiime-master /usr/local/bioinfo/qiime_examples
 
 rm -rf __MACOSX MiSeq*
 
@@ -261,9 +261,6 @@ rm -rf __MACOSX MiSeq*
 	echo $PATH
 	export PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master
 	echo $PATH
-
-
-
 	rm -rf master.zip
 
 
@@ -273,7 +270,7 @@ rm -rf __MACOSX MiSeq*
 	unzip master.zip
 	chmod +x ./BMP-master/*.py && chmod +x ./BMP-master/*.pl
 	mv ./BMP-master /usr/local/bioinfo && ln -s /usr/local/bioinfo/BMP-master/bmp-map2qiime.py /usr/local/bin && ln -s /usr/local/bioinfo/BMP-master/bmp-otuName.pl /usr/local/bin
-	rm -f master.zip
+	rm -f master.zip BMP-master
 	 
 	# Instalando o fastx_toolkit (http://hannonlab.cshl.edu/fastx_toolkit/download.html)
 	# cd /tmp
@@ -289,7 +286,7 @@ rm -rf __MACOSX MiSeq*
 	echo $PATH
 	export PATH=$PATH:/usr/local/bioinfo/fastx_toolkit_0.0.13/bin
 	echo $PATH
-	rm -rf arquivo.txt && rm -f fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
+	rm -rf arquivo.txt && rm -f fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2 && rm bin
 
 
 	echo "	Instando comando locate ... "

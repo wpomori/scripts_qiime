@@ -125,7 +125,7 @@ execute novamente este instalador. Faça assim (sem o $):
 	mkdir -p /usr/local/bioinfo
 	mv ./FastQC /usr/local/bioinfo
 	ln -s /usr/local/bioinfo/FastQC/fastqc /usr/local/bin/fastqc
-	rm -f fastqc_v0.11.5.zip Fast*
+	rm -f fastqc_v0.11.5.zip FastQC
 	echo " Finalizando a instalação de FastQC ... "
 
 #=========================================================================
@@ -178,7 +178,7 @@ execute novamente este instalador. Faça assim (sem o $):
 	apt-get update && apt-get install python-numpy build-essential -y && apt-get install aptitude -y
 	aptitude install python-dev python-devel
 #	pip install --upgrade pip && pip install --upgrade qiime
-	apt-get install mothur && apt-get install muscle
+	apt-get install mothur -y && apt-get install muscle -y
 
 	# Criando os diretórios que conteram os dados do RDP (https://www.mothur.org/wiki/RDP_reference_files)
 	# cd /tmp
@@ -196,10 +196,6 @@ execute novamente este instalador. Faça assim (sem o $):
 	wget -N http://drive5.com/uchime/gold.fa
 	mkdir -p /db/qiime/
 	mv ./gold.fa /db/qiime
-
-
-
-
 
 	# Download dos scripts usado no pipeline
 	wget https://github.com/wpomori/scripts_qiime/archive/master.zip
@@ -235,15 +231,7 @@ chown -R $USER /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
 cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
-
 rm -rf __MACOSX MiSeq*
-
-
-
-
-
-
-
 
 # Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH
 	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch && mv /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 /usr/local/bin/usearch81

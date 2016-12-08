@@ -1,5 +1,7 @@
 # scripts_qiime
 
+http://blogdoplastico.com/wp-content/uploads/2010/11/apostila_1.pdf
+
 					   INSTALANDO OS SCRIPTS DO PIPELINE
 Primeiro faça download do arquivo compactado usando wget:
 

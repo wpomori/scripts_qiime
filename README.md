@@ -1,5 +1,38 @@
 # scripts_qiime
 
+
+
+
+
+
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D0_S188_L001_R1_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D0_S188_L001_R2_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D1_S189_L001_R1_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D1_S189_L001_R2_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D5_S193_L001_R1_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D5_S193_L001_R2_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D150_S216_L001_R1_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+mv: cannot move ‘/tmp/MiSeq_SOP/F3D150_S216_L001_R2_001.fastq’ to ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh’: No such file or directory
+chmod: cannot access ‘/usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh’: No such file or directory
+
+
+
+
+
+
+
+
+
+
+
+
 					   INSTALANDO OS SCRIPTS DO PIPELINE
 Primeiro faça download do arquivo compactado usando wget:
 

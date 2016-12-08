@@ -5,7 +5,7 @@ Primeiro faça download do arquivo compactado usando wget:
 
 	$wget https://github.com/wpomori/scripts_qiime/archive/master.zip
 
-	$unzip master.zip
+	$unzip master.zip && rm -f master.zip
 
 	$chmod +x ./scripts_qiime-master/install_qiime_x86_64.sh && sudo ./scripts_qiime-master/install_qiime_x86_64.sh
 	

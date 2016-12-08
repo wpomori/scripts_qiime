@@ -234,7 +234,7 @@ mkdir -p /usr/local/bioinfo/qiime_examples
 chown -R $USER /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
-cp /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
+cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
 
 rm -rf __MACOSX MiSeq*
 

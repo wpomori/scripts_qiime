@@ -205,7 +205,9 @@ sudo mv ./MiSeq_SOP/F3D150_S216_L001_R2_001.fastq ./scripts_qiime-master/example
 sudo mkdir -p /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
-sudo cp -r ./scripts_qiime-master /usr/local/bioinfo/qiime_examples
+sudo cp -p -R ./scripts_qiime-master /usr/local/bioinfo/qiime_examples
+user=$(echo $USER)
+sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master
 sudo rm -rf __MACOSX MiSeq*
 
 # Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH

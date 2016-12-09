@@ -233,7 +233,8 @@ rm -rf __MACOSX MiSeq*
 #	echo $PATH
 
 # Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
-	chown -R $USER /usr/local/bioinfo/qiime_examples && chown -R $USER /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples
+	user=$(echo $USER)
+	chown -R ${user} /usr/local/bioinfo/qiime_examples && chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master && chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples
 	rm -rf master.zip
 
 	# Instalando scripts BMP para usar com QIIME (https://github.com/vpylro/BMP)

@@ -216,6 +216,11 @@ sudo rm -rf __MACOSX MiSeq*
 
 # Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
 	user=$(echo $USER)
+	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/1_arquivos_fasta_trimados/*
+	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/2_arquivos_fastq_trimados/*
+	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/3_arquivos_fq_raw/*
+	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw/*
+	
 	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/1_arquivos_fasta_trimados/*
 	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/2_arquivos_fastq_trimados/*
 	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/3_arquivos_fq_raw/*

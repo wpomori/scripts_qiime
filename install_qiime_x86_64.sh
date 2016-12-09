@@ -14,7 +14,6 @@
 #
 #=========================================================================
 
-
 # Tudo que estiver precedido de "#" são comentários
 # Este script serve para instalar os programas em sistemas baseados em 
 # Ubuntu 14.04 LTS
@@ -63,14 +62,14 @@
 	cd /tmp
 	# Would you like to configure as much as possible automatically? [yes] = yes
 	# Would you like me to automatically choose some CPAN mirror sites for you? (This means connecting to the Internet) [yes]
-	cpan Getopt::Long Pod::Usage File::Temp Fcntl Digest::MD5 Cwd List::Util
-	apt-get update && apt-get install libcairo2-dev -y
-	cpan Getopt::Long Pod::Usage File::Temp Fcntl Cwd JSON Cairo Statistics::PCA MIME::Base64
+	sudo cpan Getopt::Long Pod::Usage File::Temp Fcntl Digest::MD5 Cwd List::Util
+	sudo apt-get update && sudo apt-get install libcairo2-dev -y
+	sudo cpan Getopt::Long Pod::Usage File::Temp Fcntl Cwd JSON Cairo Statistics::PCA MIME::Base64
 	wget -N http://downloads.sourceforge.net/project/prinseq/standalone/prinseq-lite-0.20.4.tar.gz
 	tar -zxvf prinseq-lite-0.20.4.tar.gz
-	cp -puv prinseq-lite-0.20.4/prinseq-lite.pl /usr/local/bin/prinseq-lite.pl && chmod +x /usr/local/bin/prinseq-lite.pl
-	cp -puv prinseq-lite-0.20.4/prinseq-graphs.pl /usr/local/bin/prinseq-graphs.pl && chmod +x /usr/local/bin/prinseq-graphs.pl
-	cp -puv prinseq-lite-0.20.4/prinseq-graphs-noPCA.pl /usr/local/bin/prinseq-graphs-noPCA.pl && chmod +x /usr/local/bin/prinseq-graphs-noPCA.pl
+	sudo cp -puv prinseq-lite-0.20.4/prinseq-lite.pl /usr/local/bin/prinseq-lite.pl && sudo chmod +x /usr/local/bin/prinseq-lite.pl
+	sudo cp -puv prinseq-lite-0.20.4/prinseq-graphs.pl /usr/local/bin/prinseq-graphs.pl && sudo chmod +x /usr/local/bin/prinseq-graphs.pl
+	sudo cp -puv prinseq-lite-0.20.4/prinseq-graphs-noPCA.pl /usr/local/bin/prinseq-graphs-noPCA.pl && sudo chmod +x /usr/local/bin/prinseq-graphs-noPCA.pl
 	rm prinseq-lite-0.20.4* -rf
 	echo " Finalizando instalação do Prinseq stand-alone ... "
 
@@ -83,7 +82,7 @@
 	# Instalando Pandaseq (https://github.com/neufeld/pandaseq/wiki/Installation)
 	echo "	Iniciando a instalação do Pandaseq ... "
 	echo "	 Quando solicitado, aperte ENTER e Y para continuar a instalar PANDASEQ ... "
-	apt-add-repository ppa:neufeldlab/ppa && apt-get update && apt-get install pandaseq -y
+	sudo apt-add-repository ppa:neufeldlab/ppa && sudo apt-get update && apt-get install pandaseq -y
 	echo " Finalizando a instalação do Pandaseq ... "
 
 #=========================================================================
@@ -95,9 +94,9 @@
 	# Instalando o java 
 	# https://www.digitalocean.com/community/tutorials/como-instalar-o-java-no-ubuntu-com-apt-get-pt
 	echo "	Instalando JAVA 8 para execução do FastQC ... "
-	apt-get install default-jre -y && apt-get install default-jdk -y
+	sudo apt-get install default-jre -y && sudo apt-get install default-jdk -y
 	# Atualizando o java (http://tecadmin.net/install-oracle-java-8-jdk-8-ubuntu-via-ppa/#)
-	add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java8-installer -y
+	sudo add-apt-repository ppa:webupd8team/java && sudo apt-get update && sudo apt-get install oracle-java8-installer -y
 	java -version
 	echo " Terminado instalação do JAVA 8 ... "
 	sleep 2
@@ -106,11 +105,11 @@
 	echo "	Iniciando a instalação do FastQC ... "
 	wget -N http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip
 	unzip fastqc_v0.11.5.zip
-	chmod 755 ./FastQC/fastqc
-	mkdir -p /usr/local/bioinfo
-	mv ./FastQC /usr/local/bioinfo
-	ln -s /usr/local/bioinfo/FastQC/fastqc /usr/local/bin/fastqc
-	rm -f fastqc_v0.11.5.zip FastQC
+	sudo chmod +x ./FastQC/fastqc
+	sudo mkdir -p /usr/local/bioinfo
+	sudo mv ./FastQC /usr/local/bioinfo
+	sudo ln -s /usr/local/bioinfo/FastQC/fastqc /usr/local/bin/fastqc
+	sudo rm -rf fastqc_v0.11.5.zip FastQC
 	echo " Finalizando a instalação de FastQC ... "
 
 #=========================================================================
@@ -122,7 +121,7 @@
 	# Instalando Cutadapt usando pip 
 	# http://www.saltycrane.com/blog/2010/02/how-install-pip-ubuntu/
 	echo "	Instalando Cutadapt ... "
-	apt-get -y install python-pip python-dev && pip install --upgrade pip && pip install cutadapt
+	sudo apt-get -y install python-pip python-dev && sudo pip install --upgrade pip && sudo pip install cutadapt && sudo pip install --upgrade cutadapt
 	echo " Finalizando instalação ambiente Cutadapt ... "
 
 #=========================================================================
@@ -142,10 +141,10 @@
 #	echo $PATH
 #	export PATH=$PATH:/usr/local/bioinfo/miniconda2/bin
 #	echo $PATH
-	wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh && chmod +x ./Miniconda2-latest-Linux-x86_64.sh && ./Miniconda2-latest-Linux-x86_64.sh -f -p /usr/local/bioinfo/miniconda2
-	ln -s /usr/local/bioinfo/miniconda2/bin/conda /usr/local/bin/conda
-	conda update conda
-	rm -f ./Miniconda2-latest-Linux-x86_64.sh && rm -f ./arquivo.txt
+	wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh && sudo chmod +x ./Miniconda2-latest-Linux-x86_64.sh && sudo ./Miniconda2-latest-Linux-x86_64.sh -f -p /usr/local/bioinfo/miniconda2
+	sudo ln -s /usr/local/bioinfo/miniconda2/bin/conda /usr/local/bin/conda
+	sudo conda update conda
+	sudo rm -f ./Miniconda2-latest-Linux-x86_64.sh && rm -f ./arquivo.txt
 	echo " Terminado instalação conda ... "
 
 #=========================================================================
@@ -161,33 +160,33 @@
 	# print_qiime_config.py -t
 	# source deactivate
 	# Upgrade qiime (http://wiki.ubuntu-br.org/Aptitude) (http://qiime.org/install/upgrade.html)
-	apt-get update && apt-get install python-numpy build-essential -y && apt-get install aptitude -y
-	aptitude install python-dev python-devel
+	sudo apt-get update && sudo apt-get install python-numpy build-essential -y && sudo apt-get install aptitude -y
+	sudo aptitude install python-dev python-devel
 #	pip install --upgrade pip && pip install --upgrade qiime
-	apt-get install mothur -y && apt-get install muscle -y
+	sudo apt-get install mothur -y && sudo apt-get install muscle -y
 
 	# Criando os diretórios que conteram os dados do RDP (https://www.mothur.org/wiki/RDP_reference_files)
 	# cd /tmp
-	mkdir -p /db/mothur/rdp
-	chown -R $USER /db/mothur/rdp
+	sudo mkdir -p /db/mothur/rdp
+	user=$(echo $USER)
+	sudo chown -R ${user} /db/mothur/rdp
 	wget -N https://www.mothur.org/w/images/6/6c/Trainset14_032015.rdp.tgz
 	tar -zxvf Trainset14_032015.rdp.tgz
-	mv /tmp/trainset14_032015.rdp/trainset14_032015.rdp.fasta /db/mothur/rdp
+	sudo mv /tmp/trainset14_032015.rdp/trainset14_032015.rdp.fasta /db/mothur/rdp
 	mv /tmp/trainset14_032015.rdp/trainset14_032015.rdp.tax /db/mothur/rdp
-	rm -rf trainset14_032015.rdp
-	rm -f Trainset14_032015.rdp.tgz
+	rm -rf trainset14_032015.rdp && rm -f Trainset14_032015.rdp.tgz
 
 	# Fazer download do banco de dados do gold.fa, para buscar qimeras.
 	# cd /tmp
 	wget -N http://drive5.com/uchime/gold.fa
-	mkdir -p /db/qiime/
-	mv ./gold.fa /db/qiime
+	sudo mkdir -p /db/qiime/
+	sudo mv ./gold.fa /db/qiime
 
 	# Download dos scripts usado no pipeline
 	wget https://github.com/wpomori/scripts_qiime/archive/master.zip
 	unzip master.zip
-	rm -rf master.zip
-	tar -jxvf /tmp/scripts_qiime-master/examples.tar.bz2 && mv /tmp/examples /tmp/scripts_qiime-master && rm -rf /tmp/scripts_qiime-master/examples.tar.bz2
+	rm -r master.zip
+	tar -jxvf /tmp/scripts_qiime-master/examples.tar.bz2 && sudo mv /tmp/examples /tmp/scripts_qiime-master && sudo rm -f /tmp/scripts_qiime-master/examples.tar.bz2
 
 # Download dos dados exemplos que estarão na pasta /usr/local/bioinfo/qiime_examples
 # Peguei os dados paired-end que o Schloss deixou na página do mothur
@@ -196,34 +195,34 @@ cd /tmp
 wget https://mothur.org/w/images/d/d6/MiSeqSOPData.zip
 unzip MiSeqSOPData.zip
 
-mv ./MiSeq_SOP/F3D0_S188_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
-mv ./MiSeq_SOP/F3D0_S188_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D0_S188_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D0_S188_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
 
-mv ./MiSeq_SOP/F3D1_S189_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
-mv ./MiSeq_SOP/F3D1_S189_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D1_S189_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D1_S189_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
 
-mv ./MiSeq_SOP/F3D5_S193_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
-mv ./MiSeq_SOP/F3D5_S193_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D5_S193_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D5_S193_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
 
-mv ./MiSeq_SOP/F3D150_S216_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
-mv ./MiSeq_SOP/F3D150_S216_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D150_S216_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
+sudo mv ./MiSeq_SOP/F3D150_S216_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
 
 # Criando diretório que conterá os exemplos para o pipeline do qiime
-mkdir -p /usr/local/bioinfo/qiime_examples
+sudo mkdir -p /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
-cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
-rm -rf __MACOSX MiSeq*
+sudo cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
+sudo rm -rf __MACOSX MiSeq*
 
 # Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch && mv /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 /usr/local/bin/usearch81
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh /usr/local/bin/pipe_trim_ion_16s.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh /usr/local/bin/qiime_fa.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh /usr/local/bin/qiime_pe_pa.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh /usr/local/bin/uparse.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh /usr/local/bin/qiime_fq.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh /usr/local/bin/qiime_sg_raw.sh
-	chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh && ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh /usr/local/bin/start.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch && sudo mv /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 /usr/local/bin/usearch81
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh /usr/local/bin/pipe_trim_ion_16s.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fa.sh /usr/local/bin/qiime_fa.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_pe_pa.sh /usr/local/bin/qiime_pe_pa.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/uparse.sh /usr/local/bin/uparse.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_fq.sh /usr/local/bin/qiime_fq.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/qiime_sg_raw.sh /usr/local/bin/qiime_sg_raw.sh
+	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/start.sh /usr/local/bin/start.sh
 
 # Colocando os scripts do pipeline no PATH
 #	echo "PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master" > arquivo.txt
@@ -234,44 +233,42 @@ rm -rf __MACOSX MiSeq*
 
 # Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
 	user=$(echo $USER)
-	chown -R ${user} /usr/local/bioinfo/qiime_examples && chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master && chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples
-	rm -rf master.zip
+	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples && sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master && sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples
+	rm -r master.zip
 
 	# Instalando scripts BMP para usar com QIIME (https://github.com/vpylro/BMP)
 	# cd /tmp
 	wget -N https://github.com/vpylro/BMP/archive/master.zip
 	unzip master.zip
-	chmod +x ./BMP-master/*.py && chmod +x ./BMP-master/*.pl
-	mv ./BMP-master /usr/local/bioinfo && ln -s /usr/local/bioinfo/BMP-master/bmp-map2qiime.py /usr/local/bin && ln -s /usr/local/bioinfo/BMP-master/bmp-otuName.pl /usr/local/bin
+	sudo chmod +x ./BMP-master/*.py && sudo chmod +x ./BMP-master/*.pl
+	sudo mv ./BMP-master /usr/local/bioinfo && sudo ln -s /usr/local/bioinfo/BMP-master/bmp-map2qiime.py /usr/local/bin && sudo ln -s /usr/local/bioinfo/BMP-master/bmp-otuName.pl /usr/local/bin
 	rm -rf master.zip BMP-master
 	 
 	# Instalando o fastx_toolkit (http://hannonlab.cshl.edu/fastx_toolkit/download.html)
 	# cd /tmp
 	wget -N http://hannonlab.cshl.edu/fastx_toolkit/fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
 	tar -jxvf fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
-	mkdir -p /usr/local/bioinfo/fastx_toolkit_0.0.13
-	mv ./bin /usr/local/bioinfo/fastx_toolkit_0.0.13
+	sudo mkdir -p /usr/local/bioinfo/fastx_toolkit_0.0.13
+	sudo mv ./bin /usr/local/bioinfo/fastx_toolkit_0.0.13
 
 	# Colocar os binários do fastx_toolkit no PATH
 	# https://www.vivaolinux.com.br/artigo/O-que-e-PATH-como-funciona-e-como-trabalhar-com-eleInsta
-	cp /etc/profile /etc/profile_backup
+	sudo cp /etc/profile /etc/profile_backup
 	echo "PATH=$PATH:/usr/local/bioinfo/fastx_toolkit_0.0.13/bin" > arquivo.txt
 	echo "`echo 'PATH=$PATH:/usr/local/bioinfo/fastx_toolkit_0.0.13/bin'``cat arquivo.txt`" > /etc/profile
 	echo $PATH
 	export PATH=$PATH:/usr/local/bioinfo/fastx_toolkit_0.0.13/bin
 	echo $PATH
-	rm -rf arquivo.txt && rm -f fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
-
+	rm -f arquivo.txt && rm -f fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64.tar.bz2
 
 	echo "	Instando comando locate ... "
-	apt-get install mlocate -y
-	updatedb
+	sudo apt-get install mlocate -y && sudo updatedb
 	echo " Finalizando instalação comando locate ... "
 
 	echo "	Instalando editor VIM ... "
-	apt-get install vim -y
+	sudo apt-get install vim -y
 	echo " Finalizando instalação do editor VIM"
-	rm -rf ./scripts_qiime-master
+	sudo rm -rf ./scripts_qiime-master
 
 #=========================================================================
 #
@@ -281,7 +278,7 @@ rm -rf __MACOSX MiSeq*
 
 	# Instalando o R
 	echo "	Iniciando a instalação do pacote R ... "
-	apt-get install r-base-core -y
+	sudo apt-get install r-base-core -y
 	echo " Finalizando a instalação do R ... "
 	echo " Visite https://github.com/wpomori/scripts_qiime/blob/master/README.md "
 	echo " para ver como instalar pacotes adicionais no R para que o pipeline funcione"

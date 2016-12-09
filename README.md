@@ -2,6 +2,8 @@
 
 http://blogdoplastico.com/wp-content/uploads/2010/11/apostila_1.pdf
 
+http://www.endophyte.uky.edu/ngs/sites/default/files/Class_9_QIIME.pdf
+
 					   INSTALANDO OS SCRIPTS DO PIPELINE
 Primeiro faça download do arquivo compactado usando wget:
 

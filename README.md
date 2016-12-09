@@ -66,6 +66,6 @@ Antes de executar o script todo, será necessário que alguns pacotes do R estej
 	>q()
 
 
-Os scripts foram desenvolvidos por Wellington Pine Omori (lattes: http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4451674A5) durante o seu Doutorado em Microbiologia Agropecuária em bioinformática (UNESP/FCAV de Jabticabal) e MBA em Administração de Redes Linux. O material foi atualizado no dia 08/12/16.
+Os scripts foram desenvolvidos por Wellington Pine Omori (lattes: http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4451674A5) durante o seu Doutorado em Microbiologia Agropecuária em bioinformática (UNESP/FCAV de Jabticabal-SP) e MBA em Administração de Redes Linux (UNIARA de Araraquara-SP). O material foi atualizado no dia 08/12/16.
 
 Quaisquer dúvidas, entre em contato pelo e-mail: wpomori@gmail.com

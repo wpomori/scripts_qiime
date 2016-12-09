@@ -11,6 +11,9 @@ Primeiro faça download do arquivo compactado usando wget:
 
 	$unzip master.zip && rm -f master.zip
 
+	$tar -jxvf ./scripts_qiime-master/examples.tar.bz2 && sudo mv ./examples ./scripts_qiime-master \
+	 sudo rm -f /tmp/scripts_qiime-master/examples.tar.bz2
+
 	$sudo chmod +x ./scripts_qiime-master/install_qiime_x86_64.sh && sudo ./scripts_qiime-master/install_qiime_x86_64.sh
 	
 Pronto, agora é só executar o programa.

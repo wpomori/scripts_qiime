@@ -169,7 +169,7 @@
 	# cd /tmp
 	sudo mkdir -p /db/mothur/rdp
 	user=$(echo $USER)
-	sudo chown -R ${user} /db/mothur/rdp
+	sudo chown -R ${user}:root /db/mothur/rdp
 	wget -N https://www.mothur.org/w/images/6/6c/Trainset14_032015.rdp.tgz
 	tar -zxvf Trainset14_032015.rdp.tgz
 	sudo mv /tmp/trainset14_032015.rdp/trainset14_032015.rdp.fasta /db/mothur/rdp
@@ -207,7 +207,7 @@ sudo mkdir -p /usr/local/bioinfo/qiime_examples
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
 sudo cp -p -R ./scripts_qiime-master /usr/local/bioinfo/qiime_examples
 user=$(echo $USER)
-sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master
+sudo chown -R ${user}:root /usr/local/bioinfo/qiime_examples/scripts_qiime-master
 sudo rm -rf __MACOSX MiSeq*
 
 # Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH

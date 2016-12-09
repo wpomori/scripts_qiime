@@ -205,7 +205,7 @@ sudo mv ./MiSeq_SOP/F3D150_S216_L001_R2_001.fastq ./scripts_qiime-master/example
 sudo mkdir -p /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
-sudo cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
+sudo cp -r ./scripts_qiime-master /usr/local/bioinfo/qiime_examples
 sudo rm -rf __MACOSX MiSeq*
 
 # Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH
@@ -225,19 +225,19 @@ sudo rm -rf __MACOSX MiSeq*
 #	export PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master
 #	echo $PATH
 # Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
-	user=$(echo $USER)
+#	user=$(echo $USER)
 #	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/1_arquivos_fasta_trimados/*
 #	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/2_arquivos_fastq_trimados/*
 #	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/3_arquivos_fq_raw/*
 #	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw/*
-	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/
+#	sudo chmod -R 660 ${user} /usr/local/bioinfo/qiime_examples/
 	
 #	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/1_arquivos_fasta_trimados/*
 #	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/2_arquivos_fastq_trimados/*
 #	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/3_arquivos_fq_raw/*
 #	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw/*
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/
-	rm -r master.zip
+#	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/
+#	rm -r master.zip
 
 	# Instalando scripts BMP para usar com QIIME (https://github.com/vpylro/BMP)
 	# cd /tmp

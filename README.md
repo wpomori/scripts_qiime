@@ -7,11 +7,9 @@ http://www.endophyte.uky.edu/ngs/sites/default/files/Class_9_QIIME.pdf
 #                                          INSTALANDO OS SCRIPTS DO PIPELINE
 Primeiro faça download do arquivo compactado usando wget:
 
-	$wget https://github.com/wpomori/scripts_qiime/archive/master.zip                               \
-	 unzip master.zip && rm -f master.zip
+	$wget https://github.com/wpomori/scripts_qiime/archive/master.zip && unzip master.zip && rm -f master.zip
 
-	$tar -jxvf ./scripts_qiime-master/examples.tar.bz2 && sudo mv ./examples ./scripts_qiime-master \
-	 sudo rm -f ./scripts_qiime-master/examples.tar.bz2
+	$tar -jxvf ./scripts_qiime-master/examples.tar.bz2 && sudo mv ./examples ./scripts_qiime-master && sudo rm -f ./scripts_qiime-master/examples.tar.bz2
 
 	$sudo chmod +x ./scripts_qiime-master/install_qiime_x86_64.sh && sudo ./scripts_qiime-master/install_qiime_x86_64.sh
 	

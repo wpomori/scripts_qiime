@@ -182,12 +182,6 @@
 	sudo mkdir -p /db/qiime/
 	sudo mv ./gold.fa /db/qiime
 
-	# Download dos scripts usado no pipeline
-	wget https://github.com/wpomori/scripts_qiime/archive/master.zip
-	unzip master.zip
-	rm -r master.zip
-	tar -jxvf /tmp/scripts_qiime-master/examples.tar.bz2 && sudo mv /tmp/examples /tmp/scripts_qiime-master && sudo rm -f /tmp/scripts_qiime-master/examples.tar.bz2
-
 # Download dos dados exemplos que estarão na pasta /usr/local/bioinfo/qiime_examples
 # Peguei os dados paired-end que o Schloss deixou na página do mothur
 # https://mothur.org/wiki/MiSeq_SOP

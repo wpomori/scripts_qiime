@@ -208,12 +208,8 @@ mv ./MiSeq_SOP/F3D5_S193_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_
 mv ./MiSeq_SOP/F3D150_S216_L001_R1_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
 mv ./MiSeq_SOP/F3D150_S216_L001_R2_001.fastq ./scripts_qiime-master/examples/4_pe_fq_raw
 
-
 # Criando diretório que conterá os exemplos para o pipeline do qiime
 mkdir -p /usr/local/bioinfo/qiime_examples
-
-# Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
-chown -R $USER /usr/local/bioinfo/qiime_examples
 
 # Copiando o diretório dos scripts do pipeline do qiime para /usr/local/bioinfo/qiime_examples
 cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
@@ -235,6 +231,9 @@ rm -rf __MACOSX MiSeq*
 #	echo $PATH
 #	export PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master
 #	echo $PATH
+
+# Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
+	chown -R $USER /usr/local/bioinfo/qiime_examples && chown -R $USER /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples
 	rm -rf master.zip
 
 	# Instalando scripts BMP para usar com QIIME (https://github.com/vpylro/BMP)

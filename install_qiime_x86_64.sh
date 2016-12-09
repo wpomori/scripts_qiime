@@ -214,6 +214,13 @@ sudo mkdir -p /usr/local/bioinfo/qiime_examples
 sudo cp -r /tmp/scripts_qiime-master /usr/local/bioinfo/qiime_examples
 sudo rm -rf __MACOSX MiSeq*
 
+# Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
+	user=$(echo $USER)
+	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/1_arquivos_fasta_trimados/*
+	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/2_arquivos_fastq_trimados/*
+	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/3_arquivos_fq_raw/*
+	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw/*
+
 # Dando permissão de execussão e colocando os scripts do pipeline do QIIME no PATH
 	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch && sudo mv /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/usearch81 /usr/local/bin/usearch81
 	sudo chmod +x /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh && sudo ln -s /usr/local/bioinfo/qiime_examples/scripts_qiime-master/pipe_trim_ion_16s.sh /usr/local/bin/pipe_trim_ion_16s.sh
@@ -230,16 +237,6 @@ sudo rm -rf __MACOSX MiSeq*
 #	echo $PATH
 #	export PATH=$PATH:/usr/local/bioinfo/qiime_examples/scripts_qiime-master
 #	echo $PATH
-
-# Dando permissão de acesso ao diretório /usr/local/bioinfo/qiime_examples
-	user=$(echo $USER)
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/1_arquivos_fasta_trimados
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/2_arquivos_fastq_trimados
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/3_arquivos_fq_raw
-	sudo chown -R ${user} /usr/local/bioinfo/qiime_examples/scripts_qiime-master/examples/4_pe_fq_raw
 	rm -r master.zip
 
 	# Instalando scripts BMP para usar com QIIME (https://github.com/vpylro/BMP)
